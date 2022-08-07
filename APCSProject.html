@@ -101,11 +101,9 @@
             border-style: solid;
             width: 50%;
             font-size: 24px;
-            
         }
         img {
-            margin: 10px 10px ;
-
+            margin: 10px 10px;
         }
     </style>
     <script defer >
@@ -122,35 +120,35 @@
             var randNum =  Math.floor(Math.random() * 10) + 1;
             var img = document.createElement("img");
             if (randNum === 1) {
-                img.src = 'https://raw.githubusercontent.com/teuteuf/worldle/5755f1c32b5daa3d490005dc67b780d2951fa5ee/public/images/countries/ru/vector.svg'
-                countryImage = 'Russia'
+                img.src = 'https://raw.githubusercontent.com/teuteuf/worldle/5755f1c32b5daa3d490005dc67b780d2951fa5ee/public/images/countries/ru/vector.svg';
+                countryImage = 'Russia';
             } else if (randNum === 2){
-                img.src = 'https://raw.githubusercontent.com/teuteuf/worldle/5755f1c32b5daa3d490005dc67b780d2951fa5ee/public/images/countries/it/vector.svg'
-                countryImage = 'Italy'
+                img.src = 'https://raw.githubusercontent.com/teuteuf/worldle/5755f1c32b5daa3d490005dc67b780d2951fa5ee/public/images/countries/it/vector.svg';
+                countryImage = 'Italy';
             } else if (randNum === 3) {
-                img.src = 'https://raw.githubusercontent.com/teuteuf/worldle/5755f1c32b5daa3d490005dc67b780d2951fa5ee/public/images/countries/ca/vector.svg'
-                countryImage = 'Canada'
+                img.src = 'https://raw.githubusercontent.com/teuteuf/worldle/5755f1c32b5daa3d490005dc67b780d2951fa5ee/public/images/countries/ca/vector.svg';
+                countryImage = 'Canada';
             } else if (randNum === 4) {
-                img.src = 'https://raw.githubusercontent.com/teuteuf/worldle/5755f1c32b5daa3d490005dc67b780d2951fa5ee/public/images/countries/mx/vector.svg'
-                countryImage = 'Mexico'
+                img.src = 'https://raw.githubusercontent.com/teuteuf/worldle/5755f1c32b5daa3d490005dc67b780d2951fa5ee/public/images/countries/mx/vector.svg';
+                countryImage = 'Mexico';
             } else if (randNum === 5) {
-                img.src = 'https://raw.githubusercontent.com/teuteuf/worldle/5755f1c32b5daa3d490005dc67b780d2951fa5ee/public/images/countries/cn/vector.svg'
-                countryImage = 'China'
+                img.src = 'https://raw.githubusercontent.com/teuteuf/worldle/5755f1c32b5daa3d490005dc67b780d2951fa5ee/public/images/countries/cn/vector.svg';
+                countryImage = 'China';
             } else if (randNum === 6) {
-                img.src = 'https://raw.githubusercontent.com/teuteuf/worldle/5755f1c32b5daa3d490005dc67b780d2951fa5ee/public/images/countries/gb/vector.svg'
-                countryImage = 'Uk'
+                img.src = 'https://raw.githubusercontent.com/teuteuf/worldle/5755f1c32b5daa3d490005dc67b780d2951fa5ee/public/images/countries/gb/vector.svg';
+                countryImage = 'Uk';
             } else if (randNum === 7) {
-                img.src = 'https://raw.githubusercontent.com/teuteuf/worldle/5755f1c32b5daa3d490005dc67b780d2951fa5ee/public/images/countries/us/vector.svg'
-                countryImage = 'Us'
+                img.src = 'https://raw.githubusercontent.com/teuteuf/worldle/5755f1c32b5daa3d490005dc67b780d2951fa5ee/public/images/countries/us/vector.svg';
+                countryImage = 'Us';
             } else if (randNum === 8) {
-                img.src = 'https://raw.githubusercontent.com/teuteuf/worldle/db277d9a0d2cecf581cebc56f2a6c4caa21d2229/public/images/countries/in/vector.svg'
-                countryImage = 'India'
+                img.src = 'https://raw.githubusercontent.com/teuteuf/worldle/db277d9a0d2cecf581cebc56f2a6c4caa21d2229/public/images/countries/in/vector.svg';
+                countryImage = 'India';
             } else if (randNum === 9) {
-                img.src = 'https://raw.githubusercontent.com/teuteuf/worldle/6be795340437ee2de128be0d156878b69e11393e/public/images/countries/au/vector.svg'
-                countryImage = 'Australia'
+                img.src = 'https://raw.githubusercontent.com/teuteuf/worldle/6be795340437ee2de128be0d156878b69e11393e/public/images/countries/au/vector.svg';
+                countryImage = 'Australia';
             } else if (randNum === 10) {
-                img.src = 'https://raw.githubusercontent.com/teuteuf/worldle/5755f1c32b5daa3d490005dc67b780d2951fa5ee/public/images/countries/br/vector.svg'
-                countryImage = 'Brazil'
+                img.src = 'https://raw.githubusercontent.com/teuteuf/worldle/5755f1c32b5daa3d490005dc67b780d2951fa5ee/public/images/countries/br/vector.svg';
+                countryImage = 'Brazil';
             }
             img.style.width = '500px';
             img.style.height = '500px';
@@ -173,10 +171,10 @@
                 winScreen(guessCount);
             } else {
                 displayText();
+                paragraph1.innerText += '❌';
                 setTimeout(function() {
                     if (guessCount === 5){
                         alert("You didn't guess " + countryImage + " in 5 tries. Try again!");
-                        paragraph1.innerText += '❌';
                         document.body.style.backgroundColor = 'fireBrick';
                         guessCount = 0;
                         reloadPrep()
@@ -197,11 +195,11 @@
             if(tries>1){
                 multiple = 'es';
             } else{
-                multiple = ''
+                multiple = '';
             }
             alert('You guessed ' + countryImage + ' after ' + tries + ' guess' + multiple + '! Good Job!');
             paragraph1.innerText += '✅';
-            reloadPrep()
+            reloadPrep();
             document.body.style.backgroundColor = "rgb(22,163,74)";
         }
         function reloadPrep(){
